@@ -64,10 +64,16 @@ class Student():
             self.__cohort = new_cohort
         else:
             raise TypeError("Please provide a whole number for age")
+
+    def __str__(self):
+        return f"{self.full_name} is {self.age} and is in cohort {self.cohort}"
+
 s = Student()
 s.first_name = "Scott"
 s.last_name = "Silver"
-print(s.full_name)
+s.age = 46
+s.cohort = 33
+print(s)
 
 
 
